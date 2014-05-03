@@ -1,0 +1,15 @@
+def fb(i):
+    while float(i)/3 == i/3 and float(i)/5 == i/5:
+        aho ='FizzBuzz'
+        return aho    
+    while float(i)/3 == i/3:#i/3 !=0 and i/5 !=0:
+        aho = 'Fizz'
+        return aho
+    while float(i)/5 == i/5:#i/3 !=0 and i/5 !=0:
+        aho = 'Buzz'
+        return aho
+    
+i = 1
+while i <=20:
+    print i, fb(i)
+    i = i+1
