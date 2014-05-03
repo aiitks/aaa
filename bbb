@@ -1,0 +1,26 @@
+import sys
+
+res = raw_input('input file path')
+
+try:
+    if res == '':  
+        abc = sys.stdin.readline().strip()
+        op = open(abc,'r')
+        lines1 = op.readlines()
+            
+        i = 1
+        for line in lines1:
+            print str(i) + ' ' + line,
+            i= i + 1
+            op.close()
+    else: 
+        f = open(res, 'r')
+        lines2 = f.readlines()
+        
+        i = 1
+        for line in lines2:
+            print str(i) + ' ' + line,
+            i= i + 1
+        f.close()
+except:
+    print "No such as file"
