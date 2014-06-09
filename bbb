@@ -1,26 +1,33 @@
-import sys
+# coding:utf-8
+import os.path
 
-res = raw_input('input file path')
 
-try:
-    if res == '':  
-        abc = sys.stdin.readline().strip()
-        op = open(abc,'r')
-        lines1 = op.readlines()
-            
-        i = 1
-        for line in lines1:
-            print str(i) + ' ' + line,
-            i= i + 1
-            op.close()
-    else: 
-        f = open(res, 'r')
-        lines2 = f.readlines()
+back = 'command'
+cmd = '0'
+coun = 0
+while cmd != 'exit':
+    if coun <=0:
+        cmd = raw_input("command > ")
+       
+    elif  os.path.isdir(cmd) != True:
+        cmd = raw_input(back+" > ")
+       
+    else:
+        cmd = raw_input(cmd+" > ")
         
-        i = 1
-        for line in lines2:
-            print str(i) + ' ' + line,
-            i= i + 1
-        f.close()
-except:
-    print "No such as file"
+    if os.path.isdir(cmd) == True:   
+        back = cmd
+    
+    coun = coun + 1
+
+
+
+
+
+
+
+
+
+
+
+
